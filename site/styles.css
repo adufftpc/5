@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+}
+
+.placeholders {
+    position: absolute;
+    margin-top: 10%;
+    top: top;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.letter {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    margin: 0 5px;
+}
+
+.word-list-container {
+    margin-top: 300px; /* Ensure space below placeholders */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#wordList {
+    display: grid;
+    gap: 10px;
+    list-style-type: none;
+    padding: 0;
+    max-width: 80%;
+}
+
+#wordList li {
+    font-size: 18px;
+    margin: 5px 0;
+    text-align: left;
+}
