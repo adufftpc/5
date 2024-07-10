@@ -83,14 +83,15 @@ body {
 
 #wordList {
     display: grid;
-    gap: 10px;
+    gap: 20px;
     list-style-type: none;
     padding: 0;
     max-width: 80%;
 }
 
 #wordList li {
-    font-size: 18px;
-    margin: 5px 0;
+    font-size: 22px;
+    /* font-weight: bold; */
+    margin: 10px 0;
     text-align: left;
 }
