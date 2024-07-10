@@ -15,8 +15,7 @@ body {
 
 .placeholders {
     position: absolute;
-    margin-top: 10%;
-    top: top;
+    top: 225px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -31,8 +30,52 @@ body {
     margin: 0 5px;
 }
 
+.included-letters-container {
+    position: absolute;
+    margin-top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.included-letters {
+    font-size: 18px;
+    text-align: center;
+    color: darkgreen;
+    width: 300px;
+    padding: 5px;
+}
+
+.included-letters::placeholder {
+    color: darkgreen;
+    opacity: 0.5;
+}
+
+.excluded-letters-container {
+    position: absolute;
+    margin-top: 342px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.excluded-letters {
+    font-size: 18px;
+    text-align: center;
+    color: red;
+    width: 300px;
+    padding: 5px;
+}
+
+.excluded-letters::placeholder {
+    color: red;
+    opacity: 0.4;
+}
+
 .word-list-container {
-    margin-top: 300px; /* Ensure space below placeholders */
+    margin-top: 400px; /* Ensure space below placeholders */
     width: 100%;
     display: flex;
     justify-content: center;
