@@ -13,6 +13,15 @@ body {
     position: relative;
 }
 
+.title h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
 .placeholders {
     position: absolute;
     top: 180px;
