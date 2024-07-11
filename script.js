@@ -68,7 +68,7 @@ function updateWordList() {
     const includedLettersRegex = buildIncludedLettersRegex(includedLettersInput.value.toLowerCase());
     const excludedLettersRegex = buildExcludedLettersRegex(excludedLettersInput.value.toLowerCase());
     const filteredWords = words.filter(word => regex.test(word) && includedLettersRegex.test(word) && !excludedLettersRegex.test(word));
-    totalWords.textContent = "Found words: " + filteredWords.length;
+    totalWords.textContent = "Найдено слов: " + filteredWords.length;
     displayWords(filteredWords);
 }
 
