@@ -13,11 +13,14 @@ body {
     position: relative;
 }
 
-.title h1 {
+.title {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: 50px;
+}
+
+.title h1 {
     font-size: x-large;
     font-weight: bold;
 }
