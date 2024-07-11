@@ -28,6 +28,7 @@ window.addEventListener('resize', updateWordList);
 function handleInput(event, index) {
     const input = event.target;
     setCursorToEnd(input);
+    input.value = input.value.trim();
     if (input.value.length === 1 && index < placeholders.length - 1) {
         placeholders[index + 1].focus();
         setCursorToEnd(placeholders[index + 1]);
@@ -109,7 +110,7 @@ function displayWords(words) {
 }
 
 function calculateColumns(wordCount) {
-    const maxColumns = 6;
+    const maxColumns = 7;
     const minColumns = 1;
     const maxWordsPerColumn = 10;
 
