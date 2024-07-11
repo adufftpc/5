@@ -4,6 +4,7 @@ const placeholders = Array.from(document.querySelectorAll('.letter'));
 const wordList = document.getElementById('wordList');
 const includedLettersInput = document.getElementById('includedLetters');
 const excludedLettersInput = document.getElementById('excludedLetters');
+const totalWords = document.getElementById('totalWords');
 
 placeholders.forEach((input, index) => {
     input.addEventListener('input', (event) => handleInput(event, index));
@@ -15,7 +16,7 @@ placeholders.forEach((input, index) => {
 includedLettersInput.addEventListener('input', updateWordList);
 excludedLettersInput.addEventListener('input', updateWordList);
 
-fetch('https://gist.githubusercontent.com/adufftpc/e0334c3c5706cf2d6db6ac2b5de48636/raw/e881e649dbf7320213ab1def67c6b529c9709945/gistfile1.txt')
+fetch('dicts/5_letter_nouns_extended.txt')
     .then(response => response.text())
     .then(data => {
         words = data.split(/\r?\n/);
@@ -59,6 +60,7 @@ function setCursorToEnd(input) {
 function updateWordList() {
     if (placeholders.every(input => input.value === '') && includedLettersInput.value === '' && excludedLettersInput.value === '') {
         wordList.innerHTML = '';
+        totalWords.textContent = '';
         return;
     }
 
@@ -66,6 +68,7 @@ function updateWordList() {
     const includedLettersRegex = buildIncludedLettersRegex(includedLettersInput.value.toLowerCase());
     const excludedLettersRegex = buildExcludedLettersRegex(excludedLettersInput.value.toLowerCase());
     const filteredWords = words.filter(word => regex.test(word) && includedLettersRegex.test(word) && !excludedLettersRegex.test(word));
+    totalWords.textContent = "Found words: " + filteredWords.length;
     displayWords(filteredWords);
 }
 

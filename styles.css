@@ -15,7 +15,7 @@ body {
 
 .placeholders {
     position: absolute;
-    top: 225px;
+    top: 180px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -32,7 +32,7 @@ body {
 
 .included-letters-container {
     position: absolute;
-    margin-top: 300px;
+    margin-top: 248px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -54,7 +54,7 @@ body {
 
 .excluded-letters-container {
     position: absolute;
-    margin-top: 342px;
+    margin-top: 290px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -74,8 +74,16 @@ body {
     opacity: 0.4;
 }
 
+.total-found {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 335px;
+    color: rgb(139, 137, 137);
+}
+
 .word-list-container {
-    margin-top: 400px; /* Ensure space below placeholders */
+    margin-top: 360px; /* Ensure space below placeholders */
     width: 100%;
     display: flex;
     justify-content: center;
